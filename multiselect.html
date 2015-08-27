@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Multiselect</title>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="multiselect_simple.js"></script>
+    <style>
+        .hide-this-element {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute !important;
+            width: 1px;
+        }
+        li{
+            list-style: none;
+        }
+        input.search-text-field{
+            border:none;
+            margin-top: 10px;
+        }
+        .selected-items{
+            display:inline-block;
+            margin:0;
+            padding:0;
+            line-height:32px;
+        }
+        .selected-items li{
+            display:inline-block;
+        }
+        .search-div{
+            display: inline-block;
+            width: 180px;
+            height: 34px;
+            border: 1px solid black;
+            overflow-x: hidden;
+        }
+        .multi-select-ul{
+            display: none;
+            list-style:none;
+            margin:0;
+            padding:2px;
+            width:172px;
+            clear: both;
+            border:1px solid #ccc;
+        }
+        .multi-select-ul li{
+            margin: 0;
+            padding: 6px;
+        }
+        .multi-select-ul li:hover{
+            background: #5897fb;
+            color:#FFF;
+        }
+        .multi-select-ul li.selectable-li.active{
+            background: #CCCCCC;
+            color:#000;
+        }
+        li.selection-tokens {
+            background: #e4e4e4;
+            padding: 0px 5px;
+            line-height:18px;
+            margin: 2px;
+            border: 1px solid #CCC;
+            border-radius: 2px;
+            color:#666;
+        }
+        li.selection-tokens span.remove-selection{
+            cursor:default;
+        }
+        li.selection-tokens span.remove-selection:hover{
+            text-shadow: 1px 0px 0px #999;
+        }
+    </style>
+</head>
+
+
+<body>
+    <select name="" id="simple_multiselect" multiple style="width:180px">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <script>
+        $(function(){
+            $("#simple_multiselect").multiselect_simple({
+                option1:"option1"
+            });
+        });
+    </script>
+</body>
+</html>
